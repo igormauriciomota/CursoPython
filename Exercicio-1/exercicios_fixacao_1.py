@@ -119,4 +119,3 @@ print(f'A quantidade de digitos em 2 elevado a mil é {quantidade_digitos}')
 '''
 
 
-

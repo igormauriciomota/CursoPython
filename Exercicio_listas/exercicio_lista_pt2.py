@@ -18,10 +18,12 @@ compraDeEstoque = []
 
 op = 0
 
+# SAIR 
 while op != 4:
     print('1 - registrar vendas\n2 - Compra de estoque\n3 - Resumo da loja\n4 - Sair')
     op = int(input('Opção: '))
     
+    # REGISTRAR VENDAS
     if op == 1:
         jogoVendido = input('Jogo Vendido: ')
         quantidadeVendida = int(input('Quantidade vendida: '))
@@ -29,4 +31,29 @@ while op != 4:
             print(f'\n{jogoVendido} vendido!')
             quantidade[jogos.index(jogoVendido)] -= quantidadeVendida # Remove do estoque a quantidade vendida
             
-            vendas.append(precosVenda)
+            vendas.append(precosVenda[jogos.index(jogoVendido)] * quantidadeVendida) # Adiciona na lista
+    # vendas o valor do jogo vendido, encontrado em precosVenda[jogos.index(jogoVendido)]
+        else:
+            print('\nNão há essa quantidade disponivel em estoque!\n') # caso nao houver a quantidade disponivel
+            
+    # COMPRA DE ESTOQUE
+    elif op == 2:
+        jogoComprado = input('Jogo comprado: ')
+        quantidadeComprada = int(input('Quntidade comprada: '))
+        print(f'{jogoComprado} comprado!')
+        quantidade[jogos.index(jogoComprado)] += quantidadeComprada # Adiciona ao estoque a quantidade comprada na fabrica
+        compraDeEstoque.append(precosCompraEstoque[jogos.index(jogoComprado)] * quantidadeComprada)
+        # Adiciona na lista o valor do jogo comprado
+        
+    # RESUMO DA LOJA
+    elif op == 3:
+        print('\n\nQuantidade de jogos em estoque:')
+        for jogo in jogos:
+            print(f'{jogo}: {quantidade[jogos.index(jogo)]}') # Apresenta a lista de jogos e a quantidade disponivel
+        
+        print(f'Lucros: R${sum(vendas)}') # soma dos valores da lista 'vendas'
+        print(f'Despesas: R${sum(compraDeEstoque)}') # soma dos valores da lista compraDeEstoque
+        print(f'Caixa: R${sum(vendas) - sum(compraDeEstoque)}\n') # Determina a receita total da loja pela 
+        # subtração dos lucros pelas despesas
+        
+print('\n\nCaixa Fechado')
