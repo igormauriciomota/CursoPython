@@ -89,19 +89,6 @@ print(numeros)
 
 7 - Criar uma lista de quadrados de números negativos
 
-quadrados_negativos = [x**2 for x in range(-1, -6, -1)]
-print(quadrados_negativos)
-
-8 - Extrair números com mais de 3 dígitos
-
-9 - Criar uma lista de cubos de números
-
-10 - Filtrar palavras que começam com a letra "a"
-
-11 - Inverter as palavras de uma lista
-
-"""
-
 numeros_negativos = [-x for x in range(1, 11)]
 
 quadrados_negativos = [-x ** 2 for x in range(-1, -6, -1)]
@@ -111,3 +98,67 @@ cubos_negativos = [x ** 3 for x in numeros_negativos]
 print(f'Numeos negativos: {numeros_negativos}')
 print(f'Quadrados negativos; {quadrados_negativos}')
 print(f'Cubos negativos: {cubos_negativos}')
+
+8 - Extrair números com mais de 3 dígitos
+Objetivo: Filtrar e criar uma lista de números com mais de 3 dígitos.
+
+numero = [10, 150, 2000, 30, 50000]
+grandes = [x for x in numero if len(str(x)) > 3]
+print(grandes)
+
+[2000, 50000]
+
+9 - Criar uma lista de cubos de números
+
+Objetivo: Criar uma lista com o cubo de números de 1 a 10.
+cubos = [x ** 3 for x in range(1, 11)]
+print(cubos)
+
+[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+
+10 - Filtrar palavras que começam com a letra "a"
+
+# Objetivo: Criar uma lista com palavras que começam com "a"
+palavras = ['abacaxi', 'banana', 'avelã', 'maçã', 'goiaba', 'aveia', 'graviola']
+a_palavras = [p for p in palavras if p.startswith('a')]
+print(a_palavras)
+['abacaxi', 'avelã', 'aveia']
+
+11 - Inverter as palavras de uma lista
+Objetivo: Criar uma lista com as palavras invertidas.
+
+palavras = ['python', 'java', 'csharp', 'javaScript']
+invertidas = [p[::-1] for p in palavras]
+print(invertidas)
+
+['nohtyp', 'avaj', 'prahsc', 'tpircSavaj']
+
+12. Criar uma lista de números divisíveis por 3
+Objetivo: Criar uma lista de números divisíveis por 3 de 0 a 50.
+
+13. Contar o número de caracteres em cada palavra
+Objetivo: Criar uma lista com a quantidade de caracteres de cada palavra.
+
+14. Criar uma lista de valores booleanos verificando se o número é positivo
+Objetivo: Criar uma lista de valores booleanos que indicam se cada número de uma lista é positivo.
+
+15. Converter temperaturas de Celsius para Fahrenheit
+Objetivo: Criar uma lista convertendo temperaturas de Celsius para Fahrenheit.
+
+16. Criar uma lista com os quadrados de números ímpares
+Objetivo: Criar uma lista com o quadrado de números ímpares de 1 a 10.
+
+17. Criar uma lista de tuplas com números e seus quadrados
+Objetivo: Criar uma lista de tuplas, onde cada tupla contém um número e seu quadrado.
+
+18. Filtrar números maiores que 10 e menores que 50
+Objetivo: Criar uma lista com números maiores que 10 e menores que 50.
+
+19. Criar uma lista com as letras de uma palavra em ordem inversa
+Objetivo: Criar uma lista com as letras de uma palavra, mas em ordem inversa.
+
+20. Criar uma lista de números de 1 a 100 que são múltiplos de 3 e 5
+Objetivo: Criar uma lista com números de 1 a 100 que são múltiplos de 3 e 5.
+
+"""
+
