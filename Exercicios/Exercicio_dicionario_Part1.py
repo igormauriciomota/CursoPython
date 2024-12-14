@@ -19,9 +19,9 @@ herói imprima a arma usada. Caso resulte em empate informe na saída.
 Observação: Pode definir qualquer herói,vilao e arma que quiser.
 
 """
-herois = {'Homem de Ferro':80, 'Capitam Marvel':98, 'Thor':93, 'Goku':100}
+herois = {'Homem de Ferro':80, 'Capitam Marvel':98, 'Thor':90, 'Goku':100}
 armas = {'Mionir':90, 'Hukebaster': 95, 'Escudo':85, 'Raio de zeus': 98, 'Kaioken':98}
-viloes = {'Dike vigarista':85, 'Venon':145, 'Thanos':185, 'Friza':165, 'Ultron':182}
+viloes = {'Dike vigarista':85, 'Venon':145, 'Thanos':180, 'Friza':165, 'Ultron':182}
 
 herois_escolhido = input('Digite o heroi escolhido: ')
 arma_sescolhida = input('Digite a arma escolhida: ')
@@ -34,7 +34,7 @@ if nivel_poder_heroi > viloes[vilao_escolhido]:
 elif nivel_poder_heroi == viloes[vilao_escolhido]:
     print('Deu empate!')
 else:
-    print(f'O Vilão {vilao_escolhido}! Planeta em perigo!')
+    print(f'O Vilão {vilao_escolhido} Venceu a luta, Planeta em perigo!')
 
 # Resposta?
 
