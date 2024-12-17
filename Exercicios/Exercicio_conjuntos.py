@@ -16,12 +16,11 @@ novos Estados. Responda:
 #Situação inicial ao começar o desafio
 estados_sami = {'RJ','BA'}
 estados_dudu = {'ES','SP'}
+
 sair = ''
 while sair != 'nao': #Enquanto sair for diferente de nao faça:
-    estados_sami.add(input('Qual Estado Sami visitou a mais? '))
-#Adiciono o elemento ao conjunto, lembrando que se for elemento
-#repetido ele ignora.
-    sair = input('Tem mais Estados a adicionar? ')
+    estados_sami.add(input('Qual Estado Sami visitou a mais? '))#Adiciono o elemento ao conjunto, lembrando que se for elemento
+    sair = input('Tem mais Estados a adicionar? ') #repetido ele ignora.
 sair = ''
 while sair != 'nao':
     estados_dudu.add(input('Qual Estado Dudu visitou a mais? '))
@@ -31,6 +30,7 @@ while sair != 'nao':
 print(estados_dudu.difference(estados_sami))
 #Difference imprime a diferença entre o conjunto de dudu e sami, logo
 #resta apenas os elementos que apenas estã em dudu
+
 
 #Quais Estados ambos foram?
 print(estados_sami.intersection(estados_dudu))
