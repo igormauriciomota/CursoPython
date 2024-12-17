@@ -234,9 +234,7 @@ print(max(valores))
 print(min(valores))
 print(sum(valores))
 
+A mais funçoes e metos em conjuntos!
 '''
 
-valores = {1,6,2,8,3,7,11,25,88}
-print(max(valores))
-print(min(valores))
-print(sum(valores))
+
