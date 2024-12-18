@@ -109,10 +109,15 @@ def celsius_kelvin():
     kelvin = celsius + 273
     print(f'{kelvin}')
     sair =input('Deseja sair? ')
+    
+    # Condição de parada
+    
     if sair == 'sim':
         return 'Acabou!'
     else:
-        return celsius_kelvin() # Retornando para ela mesma, lembrando de usar os parenteses;
+        return celsius_kelvin() # 
+
+print(celsius_kelvin()) # Retornando para ela mesma, lembrando de usar os parenteses;
 
 print(celsius_kelvin())
 
@@ -126,6 +131,7 @@ def celsius_kelvin():
     kelvin = celsius + 273
     print(f'{kelvin}')
     sair =input('Deseja sair? ')
+    # Condição de parada
     if sair == 'sim':
         return 'Acabou!'
     else:
