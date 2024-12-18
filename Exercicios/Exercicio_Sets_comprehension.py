@@ -22,6 +22,10 @@ Ex.: Set comprehension
 conjunto = {numero ** 2 if numero % 2 == 0 else 'sou' 'impar' for numero in range(1,10)}
 print(conjunto)
 
+{64, 4, 36, 16, 'souimpar'}
+
 '''
 conjunto = {numero ** 2 if numero % 2 == 0 else 'sou' if num == 0 else 'impar' for num in range(0,2) for numero in range(1,10)}
 print(conjunto)
+
+# {64, 4, 36, 16, 'sou', 'impar'}
