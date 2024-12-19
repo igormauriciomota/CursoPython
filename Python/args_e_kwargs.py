@@ -1,5 +1,5 @@
 '''
-args e **kwargs
+*args e **kwargs
 
 - São parametros como quais quer outros
 - Não são obrigatorios (não exigem argumentos)
@@ -91,8 +91,7 @@ print(jogadas('Marcelo', j1=9, j2=8, j3=4, j4=6, j5=7) $ Marcelo perdeu!
 6
 7
 
-
-'''
+# Exemplo 1; de **kwargs com dicionario
 
 def apresentarNotas(**kwargs):
     for aluno in kwargs:
@@ -101,4 +100,59 @@ def apresentarNotas(**kwargs):
 notas = {'joão':7,'Igor':8,'jessica':9}
 
 apresentarNotas(**notas)
+
+# Exemplo 2;
+
+def apresentarNotas(joao, carlos, jessica):
+        print(f'Joao: {joao}, Carlos: {carlos}, jessica: {jessica}')
+        
+notas = {'joao': 7, 'carlos': 10, 'jessica': 9} # case sensitive tem de ser igual aos parametros da função;
+apresentarNotas(**notas)
+
+-----//-------
+
+# Exemplo 3; ordem de utilização da *args e **kwargs
+
+A - CORRETA: def funçõ(obrigatorios, *args, default, **kwargs)
+
+def certa(nome, *args, cidade='curitiba', **kwargs):
+    print(f'{nome}\n{args}\n{cidade}\n{kwargs}')
+
+certa('dudu', 10, 20, 30, 40, estado='Parana', pais='Brasil')
+
+result:
+
+dudu
+(10, 20, 30, 40)
+curitiba
+{'estado': 'Parana', 'pais': 'Brasil'}
+
+------//-----
+
+-> ERRADA: def funçõ(obrigatorios, default, *args, **kwargs) Não usar
+
+# a ordem dos fatores altera o quadrado?
+
+def errada(nome, cidade='curitiba', *args, **kwargs):
+    print(f'{nome}\n{args}\n{cidade}\n{kwargs}')
+
+errada('dudu', 10, 20, 30, 40, estado='Parana', pais='Brasil')
+
+dudu
+(20, 30, 40)
+10
+{'estado': 'Parana', 'pais': 'Brasil'}
+
+'''
+
+def certa(nome, *args, cidade='curitiba', **kwargs):
+    print(f'{nome}\n{args}\n{cidade}\n{kwargs}')
+    
+def errada(nome, cidade='curitiba', *args, **kwargs):
+    print(f'{nome}\n{args}\n{cidade}\n{kwargs}')
+    
+certa('dudu', 10, 20, 30, 40, estado='Parana', pais='Brasil')
+errada('dudu', 10, 20, 30, 40, estado='Parana', pais='Brasil')
+
+
 
