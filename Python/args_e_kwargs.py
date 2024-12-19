@@ -145,14 +145,6 @@ dudu
 
 '''
 
-def certa(nome, *args, cidade='curitiba', **kwargs):
-    print(f'{nome}\n{args}\n{cidade}\n{kwargs}')
-    
-def errada(nome, cidade='curitiba', *args, **kwargs):
-    print(f'{nome}\n{args}\n{cidade}\n{kwargs}')
-    
-certa('dudu', 10, 20, 30, 40, estado='Parana', pais='Brasil')
-errada('dudu', 10, 20, 30, 40, estado='Parana', pais='Brasil')
 
 
 
