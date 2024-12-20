@@ -6,8 +6,6 @@ Ex.:
 251 = 2 + 5 + 1 = 8
 
 
-'''
-
 def soma_algarismo(numero):
     divisor = 1
     num_algarismo = 0
@@ -35,3 +33,4 @@ if numero >= 0:
 else:
     print('Numero Invalido')
 
+'''
