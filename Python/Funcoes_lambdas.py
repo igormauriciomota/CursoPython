@@ -54,7 +54,8 @@ a)
 segGrau = lambda a, b, c, x: a * x ** 2 + b * x + c
 print(segGrau(1, 5, 8, 3))
 
-b)
+b) função def conforme lambda;
+
 def quadratica(a, b, c):
     return lambda x: a * x ** 2 + b * x + c
 segGrau = quadratica(1, 5, 8)
