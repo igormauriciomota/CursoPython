@@ -1,4 +1,6 @@
 '''
+EXERCICIO map(), filter() e reduce()
+
 1 - Calcule o fatorial de n utilizando loop for, e depois utilizando reduce. O
 resultado é o mesmo?
 
