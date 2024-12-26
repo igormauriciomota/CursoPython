@@ -14,7 +14,7 @@ Dados:
 100 < Passageiros <= 200: 2 estrelas.
 200 < Passageiros <= 300: 3 estrelas.
 
-
+Exercícios Utilize zip(), lambda e map() max()
 '''
 
 companheia = ['Gol', 'Latam', 'Azul']
