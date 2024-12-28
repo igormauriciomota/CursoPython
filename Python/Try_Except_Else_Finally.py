@@ -97,35 +97,6 @@ C) Tratamento de Error: try/except/else/finally:
 
 # finally e muito usado para finalizar processo:
 
-'''
-# Criando uma CALCULADORA
-
-# Função
-# Soma
-def soma(x,y):
-    op = x + y
-    return op
-
-# Subtraçao
-def subtracao(x,y):
-    op = x - y
-    return op
-
-# Mutiplicação
-def mutiplic(x,y):
-    op = x * y
-    return op
-
-# Divisão
-def divisao(x,y):
-    op = x / y
-    return op
-
-# Esponenciação
-def exponenc(x,y):
-    op = x ** y
-    return op
-
 try:
     operacao = int(input('Escolha a operação de acordo com o numero: \n 1 - Soma \n 2 - Subtracao \n 3 - Mutiplicacao \n 4 - Divisao \n 5 - Exponeciacao \n Opcao:'))
 except ValueError:
@@ -148,6 +119,67 @@ else:
             print(f'Resultado: {divisao(num1,num2)}')
         elif operacao == 5:
             print(f'Resultado: {exponenc(num1,num2)}')
+finally:
+    print('Processo finalizado!')
+
+'''
+# Criando uma CALCULADORA
+
+# Função
+# Soma
+def soma(x,y):
+    op = x + y
+    return op
+
+# Subtraçao
+def subtracao(x,y):
+    op = x - y
+    return op
+
+# Mutiplicação
+def mutiplic(x,y):
+    op = x * y
+    return op
+
+# Divisão
+def divisao(x,y):
+    try:
+        op = x / y
+    except ZeroDivisionError:
+        print('O denominador não pode ser zero')
+    else:
+        return op
+
+# Esponenciação
+def exponenc(x,y):
+    op = x ** y
+    return op
+
+try:
+    operacao = int(input('Escolha a operação de acordo com o numero: \n 1 - Soma \n 2 - Subtracao \n 3 - Mutiplicacao \n 4 - Divisao \n 5 - Exponeciacao \n Opcao:'))
+except ValueError:
+    print('Deu ValueError')
+else:
+    try:
+        num1 = int(input('Digite o primeiro numero: '))
+    except ValueError:
+        print('Deu erro:')
+    else:
+        try:
+            num2 = int(input('Digite o segundo numero: '))
+        except ValueError:
+            print('Deu erro!')
+        else:
+            if operacao == 1:
+                print(f'Resultado: {soma(num1,num2)}')
+            elif operacao == 2:
+                print(f'Resultado: {subtracao(num1,num2)}')
+            elif operacao == 3:
+                print(f'Resultado: {mutiplic(num1,num2)}')
+            elif operacao == 4:
+                print(f'Resultado: {divisao(num1,num2)}')
+            elif operacao == 5:
+                print(f'Resultado: {exponenc(num1,num2)}')
 finally:
     print('Processo finalizado!')
     
