@@ -1,4 +1,11 @@
 '''' Para Ativar o modulo debug do VScode:
+
+O que e Debug
+
+- Debug e uma forma de voce limpar e analisar todos os problemas ocorridos no seu codigo
+- A prática de utilizar print( ) para tratar erros apresentado aos poucos os dados ao longo do programa
+e uma pratica ruim.
+
 1- Clicar no menu executar/iniciar depuração (F5)
 2- Selecione "Python File - Debug the currently active Python file
 3- Note que abrirá uma aba do lado esquerdo "Executar e Depurar"
