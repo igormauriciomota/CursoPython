@@ -19,16 +19,25 @@ except ValueError:
         print('Idade deve conter apenas numeros')
     else:
         try:
-            lugar = int(input('Digite o numero para a escolha do lugar: \n 1 - EUA \n 2 - França \n 3 - Japão \n 4 - Brasil \n'))
-        except TypeError:
-            print('Deus erro!')
+            lugar = int(input('Digite o numero para a escolha do lugar: \n' 
+                              '1 - EUA \n' 
+                              '2 - França \n' 
+                              '3 - Japão \n' 
+                              '4 - Brasil \n'))
+            
+        except ValueError:
+            print('Voce deve escolher um numero de 1 a 4')
         except KeyError:
             print('KeyError: A chave digitada nao cadastrada!')
         else:
-            print(f'Nome: {nome}')
-            print(f'Idade: {idade}')
-            pais = opcoes_viagem[lugar]
-            print(f'viagem marcada para: {pais}')
+            try:
+                pais = opcoes_viagem[lugar]
+            except KeyError:
+                print('Voce deve escolher um numero de 1 a 4')
+            else:
+                print(f'viagem marcada para: {pais}')
+                print(f'Nome: {nome}')
+                print(f'Idade: {idade}')
 finally:
     print('Processo finalizado!')
     
