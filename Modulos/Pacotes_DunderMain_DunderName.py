@@ -43,12 +43,13 @@ a) Dunder(__): Double Under (Underline 2 x)
 b) Dunder Main: __main__
 c) Dunder Name: __name__
 
+----------
 # em C:
 
 int main(){
     # Tudo Aqui
 }
-
+----------
 # em Python: Atribui o valor __main__ para a variavel __name__
 
 Print(__name__)
@@ -63,6 +64,6 @@ Olá, estamos em outro módulo!
 
 '''
 
-
+import random
 
 
