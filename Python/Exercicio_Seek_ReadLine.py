@@ -1,0 +1,10 @@
+'''
+Exercicio Seek e ReadLine
+
+
+
+
+
+'''
+
+
