@@ -166,6 +166,5 @@ with open('C:\\Users\\Igor\\Envs\\CursoPython\\CursoPython\\Arquivos\\herois.txt
     arq.seek(0)
     arq.write('Soldado Invernal\n')  
     
-
 '''
 
