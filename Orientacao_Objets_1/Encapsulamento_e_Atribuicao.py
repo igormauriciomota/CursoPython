@@ -1,5 +1,5 @@
 '''
-Programação Orientada a Obgetos Encapsulamento e Abstração
+Programação Orientada a Objetos Encapsulamento e Abstração
 
 
 
