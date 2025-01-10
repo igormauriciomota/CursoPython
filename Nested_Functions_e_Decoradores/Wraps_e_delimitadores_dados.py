@@ -140,3 +140,36 @@ cont_alunos_aprovados(Leticia=7,Joao=5,Maia=6,Cartos=8)
 
 '''
 
+from functools import wraps
+
+
+def aprovados(funcao):
+    """
+    Essa função retorna uma lista completa do nome dos alunos aprovados
+    """
+    @wraps(funcao)
+    def decorador(*args, **kwargs):
+        """
+        Função que decora e faz os testes de notas
+        """
+        print(f'{aprovados.__name__}') # Retornar o nome da função
+        print(f'{aprovados.__doc__}') # Retorna a documentação de aprovados
+        aprovado = []
+        for chave,nota in kwargs.items():
+            if nota >= 6:
+                aprovado.append(chave)
+        print(aprovado)
+        return funcao(*aprovado)
+    return decorador
+
+@aprovados
+def cont_alunos_aprovados(*args, **kwargs):
+    """
+    Apresenta a quantidade de alunos aprovcados
+    """
+    print(f'{cont_alunos_aprovados.__name__}') # Retorna o 'decorador'
+    print(f'{cont_alunos_aprovados.__doc__}') # Retorna o doc. de decorador
+    print(len(args))
+    print(dir(args))
+    
+    

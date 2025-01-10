@@ -80,4 +80,18 @@ print(funcao()) # Parenteses () chama a função/ imprime o nome mesmo não send
 
 
 '''
+from random import randint
 
+
+def num_aleatorio():
+    return randint(1,6)
+
+def pessoa(funcao, nome):
+    resultado = funcao()
+    if resultado < 4:
+        return str(resultado) + ' Voce Perdeu! ' + nome
+    else:
+        return str(resultado) + ' Vitoria Perfeita! ' + nome
+
+nome = input('Escreva um nome: ')
+print(pessoa(num_aleatorio, nome))

@@ -265,3 +265,31 @@ print(pcVovo.modelo()) # Acessar pelo Objeto
 '''
 
 
+class Computador:
+    
+    # Atributo de classes
+    peixes = 98
+    
+    @classmethod
+    def conta_peixes(cls):
+        print('Nome da classe: {cls}')
+        print('Existem: {cls.peixes} peixes na classe: {cls}')
+        # Existem: {cls.peixes} peixes na classe: {cls}
+        
+    # Metodo construtor usa o __init__
+    def __init__(self, cor, peso, polegadas):
+        self.cor = cor
+        self.peso = peso
+        self.poledadas = polegadas
+        
+    # Métodos instancia >> pcPrimo.memoria(1024, 8) <<
+    def memoria(self, hdd, ram):
+        self.hdd = hdd
+        self.ram = ram
+        
+    # Métodos Privados __nome
+    def __caracteristicas(self):
+        return f'{self.cor} e com {self.hdd} GB'
+        
+pcVovo = Computador('Dourado', 0.250, 21)
+pcVovo.memoria(256, 2)
