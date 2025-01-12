@@ -61,7 +61,7 @@ import time
 from random import choice as ch
 
 vivo = True
-obstaculo = ['Cima', 'Baixo', 'Esquerda', 'Direita']
+obstaculos = ['Cima','Baixo','Esquerda','Direita']
 
 pontos = -1
 tempo = 2
@@ -75,7 +75,7 @@ while vivo:
     pontos += 1
     time.sleep(tempo - pontos / 10)
     print('\n')
-    obstaculo = ch(obstaculo)
+    obstaculo = ch(obstaculos)
     print(f'Obstaculo: {obstaculo}')
     comando = input('comando: ')
     if comando == 'w' and obstaculo == 'Baixo':
@@ -95,4 +95,6 @@ while vivo:
         
 print('\n')
 print('GAME OVER!')
+print('Obrigado por jogar...')
+print(f'Pontos: {pontos}')
 
