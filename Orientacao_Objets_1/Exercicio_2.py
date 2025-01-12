@@ -64,33 +64,36 @@ class Robo:
         
 print('----------------MENU--------------')
 
-bateria = int(input('Digite a bateria do Robo: '))
+try:
+    bateria = -1
+    while bateria > 100 or bateria < 0:
+        bateria = int(input('Digite a bateria do Robo: '))
+    R2D2 = Robo(bateria)
+except ValueError:
+    print('Opção Invalida')
+else:
+    finalizar = ''
+    while finalizar != 'sair':
+        try:
+            opcao = int(input('Digite o numero respectivo ao comando que seja:\n'
+                            '1 - Liga/Desliga o Robo\n'
+                            '2 - Movimentar o Robo\n'
+                            '3 - Controle de Energia do Robo\n'
+                            '4 - Finalizar o Programa\n'
+                            'Escolha: '))
+        except ValueError:
+            print('Opção Invalida')
+        else:
+            if opcao == 1:
+                R2D2.liga_desliga()
+            elif opcao == 2:
+                R2D2.movimento(input('Digite o lado para o qual o robo ira andar: '))
+            elif opcao == 3:
+                R2D2.controle_energia()
+            elif opcao == 4:
+                finalizar = 'sair'
+            else:
+                print('\nDigite um numero de 1 a 4\n')
+finally:
+    print('Programa Finalizado')
 
-R2D2 = Robo(bateria)
-
-finalizar = ''
-while finalizar != 'sair':
-    opcao = int(input('Digite o numero respectivo ao comando que seja:\n'
-                    '1 - Liga/Desliga o Robo\n'
-                    '2 - Movimentar o Robo\n'
-                    '3 - Controle de Energia do Robo\n'
-                    '4 - Finalizar o Programa\n'
-                    'Escolha: '))
-    if opcao == 1:
-        R2D2.liga_desliga()
-    elif opcao == 2:
-        R2D2.movimento(input('Digite o lado para o qual o robo ira andar: '))
-    elif opcao == 3:
-        R2D2.controle_energia()
-    elif opcao == 4:
-        finalizar = 'sair'
-    else:
-        print('\nDigite um numero de 1 a 4\n ')
-        
-    
-    
-    
-    
-    
-    
-    
