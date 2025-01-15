@@ -21,7 +21,7 @@ Herança em Python
 - sub classe
 
 '''
-
+# Método super() pode acessar qualquer atributo0 é metodo da super classe
 # Super classe
 class Aparelho:
     
