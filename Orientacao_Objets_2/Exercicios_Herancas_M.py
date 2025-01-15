@@ -1,72 +1,89 @@
 '''
-1 - Desenvolva o sistema de um controle universal para uma casa. O controle deve
-ser a Classe-Mãe, que contém o método liga/desliga e é herdada por outras três
-classes (equipamentos controlados): ar-condicionado, micro-ondas e televisão, que
-controlam, respectivamente, temperatura, tempo e volume em métodos dentro das
-classes. Além disso, os métodos construtores das Classes Filhas recebem a variável
-controlada em seu valor atual, por exemplo 'temperaturaAtual'.
-Obs.: Utilize também propriedades para realizar o acesso aos atributos.
+Exercícios:
+
+1 - Crie duas classes chamadas 'Homem' e 'Urso', que recebem apenas nome
+como parâmetro. Estas classes devem herdar de outras duas chamadas
+'Carnivoros' e 'Herbivoros', que possuem dois métodos cada ('caçar_animal' e
+'comer_carne' para 'Carnivoros', 'procurar_arvore' e 'comer_folhas' para
+'Herbivoros') e herdam de uma Superclasse chamada 'Animal', na qual possui
+os métodos 'andar' e 'correr'. Por fim, instancie dois objetos, da classe 'Homem'
+e da classe 'Urso', e execute todos os métodos.
+
+Obs.: Crie um método para as classes 'Homem' e 'Urso' representando uma
+ação característica de cada, por exemplo ler um livro para o homem e hibernar
+para o urso.
 
 '''
 
-class Controle:
+class Animal:
     
-    ligado = False
-    def liga_desliga(self):
-        self.ligado = not self.ligado
+    def andar(self):
+        print('Andando...')
         
-
-class Arcondicionado(Controle):
+    def correr(self):
+        print('correndo...')
+        
+class Carnivoros(Animal):
     
-    def __init__(self, temperaturaAtual):
+    def cacar_animal(self):
+        print('Caçando animal...')
+        
+    def comer_carne(self):
+        print('Comendo carne...')
+        
+class Herbivoro(Animal):
+    
+    def procurar_arvor(self):
+        print('Procurando arvore...')
+        
+    def comer_folha(self):
+        print('Comendo folha...')
+
+# Herda de Carnivoros e Herbivoros
+class Homem(Carnivoros, Herbivoro):
+    
+    def __init__(self, nome):
         super().__init__()
-        self.__tempreraturaAtual = temperaturaAtual
+        self.__nome = nome
         
-    def controle_temperatura(self, temperatura):
-        self.__tempreraturaAtual = temperatura
-        
-    @property
-    def temperaturaAtual(self):
-        return f'Temperatura atual: {self.__tempreraturaAtual}'
-    
+    def nome(self):
+        print(f'Nome: {self.__nome}')
 
-class Microondas(Controle):
+    def lendo_livro(self):
+        print('Lendo um Livro...')
+        
+
+class Urso(Carnivoros, Herbivoro):
     
-    def __init__(self, tempoAtual):
+    def __init__(self, nome):
         super().__init__()
-        self.__tempoAtual = tempoAtual
+        self.__nome = nome
         
-    def controle_tempo(self, tempo):
-        self.__tempoAtual = tempo
+    def nome(self):
+        print(f'Nome: {self.__nome}')
         
-    @property
-    def tempoAtual(self):
-        return f'Tempo atual: {self.__tempoAtual}'
+    def hibernar(self):
+        print('Hibernando...')
+        
 
-
-class Televisao(Controle):
-    
-    def __init__(self, volumeAtual):
-        super().__init__()
-        self.__volumeAtual = volumeAtual
-        
-    def controle_volume(self, volume):
-        self.__volumeAtual = volume
-        
-    @property
-    def volumeAtual(self):
-        return f'Volume atual: {self.__volumeAtual}'
-    
-    
 # Objeto
-arc = Arcondicionado(45)
-mic = Microondas(60)
-tv = Televisao(85)
-
-print(arc.ligado)
-arc.liga_desliga()
-print(arc.ligado)
-print(arc.temperaturaAtual)
-arc.controle_temperatura(35)
-print(arc.temperaturaAtual)
-
+igor = Homem('Igor M')
+igor.nome()
+igor.lendo_livro()
+igor.andar()
+igor.procurar_arvor()
+igor.correr()
+igor.cacar_animal()
+igor.comer_folha()
+igor.comer_carne()
+print('\n')
+# Objeto
+urso = Urso('Puffe')
+urso.nome()
+urso.hibernar()
+urso.andar()
+urso.procurar_arvor()
+urso.correr()
+urso.cacar_animal()
+urso.comer_folha()
+urso.comer_carne()
