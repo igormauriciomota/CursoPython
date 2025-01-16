@@ -75,3 +75,12 @@ matriz2 = [[num * 3 for num in linha] for linha in matriz]
 print(f'\n{matriz2}')
 
 '''
+# lista de 1 a 10
+numeros = list(range(1, 11))
+
+# sintaxe - o if vai na frente do for sempre
+pares = [num for num in numeros if num % 2 == 0]
+impares = [num for num in numeros if num % 2 != 0]
+
+print(pares)
+print(impares)
