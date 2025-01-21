@@ -86,20 +86,12 @@ print(produto)
 
 -------------------------------
 
-N-6
+N-6 Herança simples
+Crie uma classe Animal com um método som. Depois, crie subclasses Cachorro e Gato que sobrescrevem o método.
+
+
+
 '''
 
 
-class Produto:
-    
-    def __init__(self, nome, preco):
-        self.nome = nome
-        self.preco = preco
-        
-    def __str__(self):
-        return f'Produto: {self.nome}, Preço: R$ {self.preco:.2f}'
-    
-# Objeto
-produto = Produto('Notebook', 3500.00)
-print(produto)
 
