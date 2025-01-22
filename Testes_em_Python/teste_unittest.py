@@ -3,6 +3,8 @@
 e comum e organizado;
 
 >> E Recomendado realizar um teste para cada função
+
+verificar as docstrings>python teste_unittest.py -v
 '''
 import unittest
 
@@ -38,7 +40,6 @@ class ConhecendoUnittestTeste(unittest.TestCase):
 
 if __name__ == '__main__': # Essa linha é necessaria pois podemos importar o módulo testes(reaproveitando para outros sistema)
     unittest.main() # Comando para criar a interface e realizar os testes em si
-        
-        
-    
+
+
 

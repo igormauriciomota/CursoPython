@@ -23,3 +23,22 @@ mas será aplicado uma das possíveis soluções abaixo.
 
 '''
 
+def acordar_cedo(horario):
+    if horario > 6:
+        return 'Tente novamente amanhã'
+    return 'Voce é um guerreiro'
+
+
+def tempo_exercicio(peso, tempo):
+    if tempo > 2:
+        peso -= 1
+        return peso
+    else:
+        pass
+
+
+def tem_exercicio(esporte):
+    if esporte == 'Descanso':
+        return False
+    return True
+    

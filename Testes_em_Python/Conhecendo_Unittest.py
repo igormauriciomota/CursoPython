@@ -45,6 +45,10 @@ Apresentada a Baixo:
 ------ Aplicar TDD -------
 
 E convenção nomear cada função dentro do módulo teste iniciando com test_
+E interessante que cada função tenha um teste
+E possivel adicionar docstrings nos testes, inclusive e recomendado
+
+verificar as docstrings>python teste_unittest.py -v
 
 '''
 # Função que converte o padrão 24h para 12h. Ex 16:34 p/ 4:34 PM
