@@ -42,23 +42,22 @@ Apresentada a Baixo:
 
 >> E conveniente desenvolver os testes em outro módulo separadamente
 
-
 ------ Aplicar TDD -------
 
-1-Função que converte o padrão 24h para 12h. Ex: 16:34 p/ 4:34 P.M
-
-
-
-2-Função que define se é par ou impar, caso for par retorna True, se não retorna False
-
+E convenção nomear cada função dentro do módulo teste iniciando com test_
 
 '''
-#1
+# Função que converte o padrão 24h para 12h. Ex 16:34 p/ 4:34 PM
 def converter_padrao(hora, minuto):
-    pass
+    if hora >= 12:
+        hora -= 12
+        return f'{hora}:{minuto} P.M'
+    return f'{hora}:{minuto} A.M'
 
-
+# Função que define se e par ou impar, caso for par retorna True, se não retorna False
 def par_impar(numero):
-    pass
+    if numero % 2 == 0:
+        return True
+    return False
     
-
+# E conveniente desenvolver os testes em módulo separado
