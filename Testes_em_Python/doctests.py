@@ -80,7 +80,7 @@ def gritar(palavra):
     """
     Transforma a palavra em letras maiusculas
     >>> gritar('goollll')
-    "GOOLLLL" # Usar aspas simples em docteste ('')
+    "GOOLLLL" # Usar aspas simples em docteste 'GOOLLLL'
     """
     return f"{palavra.upper()}"
     # Cuidado com o uso de aspas duplas ou simples em doctests
