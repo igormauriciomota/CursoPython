@@ -103,6 +103,24 @@ traducao_para_ingles = texto.translate(to='en')
 print("Original:", frase)
 print("Traduzido para inglês:", traducao_para_ingles)
 
+
+---------------------------------------
+
+from googletrans import Translator
+
+
+def traduzir_com_auto_idioma(frase, idioma_destino="en"):
+    translator = Translator()
+    idioma_origem = translator.detect(frase).lang
+    print(f"Idioma original detectado: {idioma_origem}")
+    traducao = translator.translate(frase, dest=idioma_destino)
+    return traducao.text
+
+# Exemplo de uso
+frase = "Guten Morgen"
+traducao = traduzir_com_auto_idioma(frase, "pt")
+print("Frase traduzida:", traducao)
+
 """
 
 
