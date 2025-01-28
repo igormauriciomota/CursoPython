@@ -1,6 +1,20 @@
 """
 Plotando Graficos
 
+o importar matplotlib.pyplot, importamos esta coleção de funções, que inclui as funções:
+
+plot(): Cria um gráfico de linha ou gráfico de dispersão.
+hist(): Cria um histograma.
+scatter(): Cria um gráfico de dispersão.
+bar(): Cria um gráfico de barras.
+pie(): Cria um gráfico de pizza.
+xlabel(): define o rótulo para o eixo x.
+ylabel(): define o rótulo para o eixo y.
+title(): Define o título do gráfico.
+legend(): Adiciona uma legenda ao gráfico.
+xlim(): Define os limites para o eixo x.
+ylim(): Define os limites para o eixo y.
+
 """
 #----------------------------Desenhar grafico de linha----------------------------------------
 
