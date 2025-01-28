@@ -1,8 +1,7 @@
 """
-Plotando Graficos e desligar/reiniciar computador pela voz
+Plotando Graficos
 
 """
-
 #----------------------------Desenhar grafico de linha----------------------------------------
 
 import statistics
@@ -30,19 +29,19 @@ grafico.show()
 
 
 
-#----------------------------Desenhar grafico pizza-------------------------------------------
 
 
 
 
 
-#----------------------------Desenhar grafico de barras---------------------------------------
 
 
 
 
 
-#----------------------------Desligar e Reiniciar o PC por voz--------------------------------
+
+
+
 
 
 
