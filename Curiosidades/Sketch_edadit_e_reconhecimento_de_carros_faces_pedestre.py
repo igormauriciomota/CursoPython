@@ -1,30 +1,22 @@
 """
 Transformando imagens em sketchs (esboço)
 
-
 import cv2
 
-# Carregar a imagem
-imagem = cv2.imread("C:\\Users\\Igor\\Envs\\CursoPython\\CursoPython\\Curiosidades\\logo.jpg")
+imagem = cv2.imread("C:\\Users\\Igor\\Envs\\CursoPython\\CursoPython\\Curiosidades\\logo .jpg")
+# Converter para escala de cinza
+imagem_sketch = cv2.cvtColor(imagem,  cv2.COLOR_BGR2GRAY)
+print(type(imagem_sketch))
+print(imagem_sketch)
+# Aplicar um desfoque para suavizar
+esboco = cv2.GaussianBlur(255-imagem_sketch,(31,31),0)
+print(esboco)
+print(type(esboco))
+pincel = cv2.divide(imagem_sketch,255-esboco,scale=300.0)
 
-if imagem is None:
-    print("Erro ao carregar a imagem. Verifique o caminho.")
-else:
-    # Converter para escala de cinza
-    imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
+cv2.imwrite('C:\\Users\\Igor\\Envs\\CursoPython\\CursoPython\\Curiosidades\\foto.png', pincel)
 
-    # Inverter a imagem (efeito negativo)
-    imagem_invertida = cv2.bitwise_not(imagem_cinza)
-
-    # Aplicar um desfoque para suavizar
-    imagem_suavizada = cv2.GaussianBlur(imagem_invertida, (21, 21), sigmaX=0, sigmaY=0)
-
-    # Criar o efeito de sketch
-    imagem_sketch = cv2.divide(imagem_cinza, 255 - imagem_suavizada, scale=256)
-
-    # Mostrar a imagem resultante
-    cv2.imshow("Sketch", imagem_sketch)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
 
 """
+
+
